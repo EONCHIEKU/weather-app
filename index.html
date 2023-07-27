@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+         
+  </head>
+  <body>
+    <h1>
+      🌤
+      <br />
+      Currently 21° in Tokyo
+    </h1>
+    <h2>13° / <strong>23°</strong></h2>
+    <ul>
+      <li>
+        <h3>🌧Tomorrow</h3>
+        <p>10° / <strong>22°</strong></p>
+      </li>
+      <li>
+        <h3>🌥 Saturday</h3>
+        <p>15° / <strong>17°</strong></p>
+      </li>
+      <li>
+        <h3>☀️ Sunday</h3>
+        <p>25° / <strong>28°</strong></p>
+      </li>
+    </ul>
+
+    <button>Change city</button>
+    <script>
+      function getCity() {
+        let city = prompt("What city do you live in?");
+        let temperature = prompt("What temperature is it?");
+        let h1 = document.querySelector("h1");
+
+        if (temperature >= 0) {
+          h1.innerHTML = `😄<br /> Currently ${temperature}° in ${city}`;
+        } else {
+          h1.innerHTML = `☹️ <br /> Currently ${temperature}° in ${city}`;
+        }
+      }
+      let changeCityButton = document.querySelector("button");
+      changeCityButton.addEventListener("click", getCity);
+    </script>
+    <p>Coded by Esther Onchieku</p>
+  </body>
+</html>
